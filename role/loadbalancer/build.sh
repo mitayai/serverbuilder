@@ -22,3 +22,4 @@ echo "postfix postfix/rfc1035_violation boolean false" | debconf-set-selections
 echo "postfix postfix/destinations string $HOSTNAME, localhost.localdomain, , localhost" | debconf-set-selections
 echo "postfix postfix/kernel_version_warning boolean" | debconf-set-selections
 apt-get -y install postfix
+curl -s http://169.254.169.254/metadata/v1.json | mail -s "$HOSTNAME online" $MYEMAIL
