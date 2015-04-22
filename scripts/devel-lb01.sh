@@ -12,4 +12,3 @@ cd serverbuilder/role/${ROLE}
 bash build.sh", "ssh_keys":["6e:a7:47:10:48:08:85:c9:7d:af:77:97:15:9f:9a:ac"]}' \
       -H "Authorization: Bearer ${AUTHTOKEN}" \
       -H "Content-Type: application/json"
-      
