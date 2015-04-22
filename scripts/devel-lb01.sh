@@ -7,8 +7,7 @@ curl -X POST "https://api.digitalocean.com/v2/droplets" \
 apt-get -y update
 apt-get -y upgrade
 apt-get -y install git
-git clone https://github.com/mitayai/serverbuilder.git
-cd serverbuilder/role/${ROLE}
-bash build.sh", "ssh_keys":["6e:a7:47:10:48:08:85:c9:7d:af:77:97:15:9f:9a:ac"]}' \
+git clone https://github.com/mitayai/serverbuilder.git /opt/serverbuilder
+bash /opt/serverbuilder/role/${ROLE}/build.sh", "ssh_keys":["6e:a7:47:10:48:08:85:c9:7d:af:77:97:15:9f:9a:ac"]}' \
       -H "Authorization: Bearer ${AUTHTOKEN}" \
       -H "Content-Type: application/json" > create.log
